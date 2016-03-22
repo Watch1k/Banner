@@ -14,7 +14,7 @@
 
 
 <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
-<script src="336x280.js?1458638356917"></script>
+<script src="336x280.js?1458651384983"></script>
 <script>
 var canvas, stage, exportRoot;
 function init() {
@@ -22,12 +22,10 @@ function init() {
 	
 	canvas = document.getElementById("canvas");
 	images = images||{};
-	ss = ss||{};
 
 	var loader = new createjs.LoadQueue(false);
 	loader.addEventListener("fileload", handleFileLoad);
 	loader.addEventListener("complete", handleComplete);
-	loader.loadFile({src:"images/336x280_atlas_.json?1458638356917", type:"spritesheet", id:"336x280_atlas_"}, true);
 	loader.loadManifest(lib.properties.manifest);
 }
 
@@ -36,8 +34,6 @@ function handleFileLoad(evt) {
 }
 
 function handleComplete(evt) {
-	var queue = evt.target;
-	ss["336x280_atlas_"] = queue.getResult("336x280_atlas_");
 	exportRoot = new lib._336x280();
 
 	stage = new createjs.Stage(canvas);

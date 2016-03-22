@@ -8,7 +8,12 @@ lib.properties = {
 	height: 280,
 	fps: 24,
 	color: "#FFFFFF",
-	manifest: []
+	manifest: [
+		{src:"images/Layer6copy.png?1458651384932", id:"Layer6copy"},
+		{src:"images/Layer6copy2.png?1458651384932", id:"Layer6copy2"},
+		{src:"images/Rectangle1.jpg?1458651384932", id:"Rectangle1"},
+		{src:"images/VectorSmartObject.png?1458651384932", id:"VectorSmartObject"}
+	]
 };
 
 
@@ -18,31 +23,27 @@ lib.properties = {
 
 
 (lib.Layer6copy = function() {
-	this.spriteSheet = ss["336x280_atlas_"];
-	this.gotoAndStop(0);
-}).prototype = p = new cjs.Sprite();
-
+	this.initialize(img.Layer6copy);
+}).prototype = p = new cjs.Bitmap();
+p.nominalBounds = new cjs.Rectangle(0,0,336,14);
 
 
 (lib.Layer6copy2 = function() {
-	this.spriteSheet = ss["336x280_atlas_"];
-	this.gotoAndStop(1);
-}).prototype = p = new cjs.Sprite();
-
+	this.initialize(img.Layer6copy2);
+}).prototype = p = new cjs.Bitmap();
+p.nominalBounds = new cjs.Rectangle(0,0,336,14);
 
 
 (lib.Rectangle1 = function() {
-	this.spriteSheet = ss["336x280_atlas_"];
-	this.gotoAndStop(2);
-}).prototype = p = new cjs.Sprite();
-
+	this.initialize(img.Rectangle1);
+}).prototype = p = new cjs.Bitmap();
+p.nominalBounds = new cjs.Rectangle(0,0,336,280);
 
 
 (lib.VectorSmartObject = function() {
-	this.spriteSheet = ss["336x280_atlas_"];
-	this.gotoAndStop(3);
-}).prototype = p = new cjs.Sprite();
-
+	this.initialize(img.VectorSmartObject);
+}).prototype = p = new cjs.Bitmap();
+p.nominalBounds = new cjs.Rectangle(0,0,91,45);
 
 
 (lib.Symbol5 = function(mode,startPosition,loop) {
@@ -434,6 +435,13 @@ p.nominalBounds = new cjs.Rectangle(-105.9,-198.9,336,280);
 (lib._1 = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
 
+	// Layer 2
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f().s("#A6A9AB").ss(1,1,1).p("A6P3WMA0fAAAMAAAAutMg0fAAAg");
+	this.shape.setTransform(168,149.5);
+
+	this.timeline.addTween(cjs.Tween.get(this.shape).wait(162));
+
 	// Layer 6 copy
 	this.instance = new lib.Layer6copy_1();
 	this.instance.setTransform(168,292,1,1,0,0,0,168,7);
@@ -576,7 +584,7 @@ p.nominalBounds = new cjs.Rectangle(-105.9,-198.9,336,280);
 	this.timeline.addTween(cjs.Tween.get(this.instance_17).wait(162));
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(0,0,336,299);
+p.nominalBounds = new cjs.Rectangle(-1,-1,338,301);
 
 
 // stage content:
@@ -593,7 +601,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,336,299);
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(205));
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(168,130,336,299);
+p.nominalBounds = new cjs.Rectangle(167.5,129.5,337,300);
 
 })(lib = lib||{}, images = images||{}, createjs = createjs||{}, ss = ss||{});
 var lib, images, createjs, ss;
